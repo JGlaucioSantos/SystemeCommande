@@ -134,6 +134,8 @@ public class SistemeComandeApplication implements CommandLineRunner {
 		
 		itenDemandeRepository.saveAll(Arrays.asList(itdem1, itdem2, itdem3));
 		
+		
+		
 	}
 
 }

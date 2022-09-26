@@ -10,9 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.glaucio.santos.domain.Categorie;
 import com.glaucio.santos.services.CategorieService;
 
-@RestController
-@RequestMapping(value = "/Categories")
+@RestController // Responsavel por controlar as requisicoes indicando quem deve receber as aquisicoes para quem deve responde-las 
+@RequestMapping(value = "/Categories") // E a anotacao utilizada tradicionalmente para implementar URL handler e suporta metodos Post, Get, Put, Delete e Pach
 public class CategorieResourses {
+	
+	@RequestMapping(method=RequestMethod.GET)
+	public String liste() {
+		return  "REST OK";
+	}
 	
 	@Autowired
 	private CategorieService service;
